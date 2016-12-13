@@ -1,0 +1,154 @@
+﻿@model dlrealestate3.Models.Property
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Property</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Agent.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Agent.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StreetAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StreetAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Suburb)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Suburb)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumberOfBedrooms)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumberOfBedrooms)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumberOfBathrooms)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumberOfBathrooms)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GarageSpace)
+        </dt>
+
+        <dd>
+            @Html.DisplayNameFor(model => model.GarageSpace)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HouseSize)
+        </dt>
+
+        <dd>
+            @Html.DisplayNameFor(model => model.HouseSize)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LandSize)
+        </dt>
+
+        <dd>
+            @Html.DisplayNameFor(model => model.LandSize)
+        </dd>
+        
+        <dt>
+            @Html.DisplayNameFor(model => model.Insurance)
+        </dt>
+
+        <dd>
+            @Html.DisplayNameFor(model => model.Insurance)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SaleStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SaleStatus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateListed)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateListed)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ImageUrl1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ImageUrl1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ImageUrl2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ImageUrl2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ImageUrl3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ImageUrl3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ImageUrl4)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ImageUrl4)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,63 @@
+﻿@model IEnumerable<dlrealestate3.Models.Property>
+
+@{
+    ViewBag.Title = "Listings";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Suburb)
+        </th>
+        <th>
+            Bedrooms
+        </th>
+        <th>
+            Bathrooms
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th>
+            Sale Status
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            <img src="@Html.DisplayFor(modelItem => item.ImageUrl1)" />
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Suburb)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumberOfBedrooms)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumberOfBathrooms)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SaleStatus)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

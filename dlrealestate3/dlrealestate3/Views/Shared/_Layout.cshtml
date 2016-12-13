@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - David Lawrence Real Estate</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="http://davidlawrence.kiwi"><img src="Resources/Images/logosmall.jpg"></img></a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Properties For Sale", "Index", "Property")</li>
+                    <li>@Html.ActionLink("Request An Appraisal", "About", "Home")</li>
+                    <li>@Html.ActionLink("Meet The Agents", "Index", "Agent")</li>
+                    <li>@Html.ActionLink("Local History", "Index", "LocalHistory")</li>
+                    <li>@Html.ActionLink("Contact Us", "Contact", "Home")</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <br />
+    <div class="container body-content">
+
+
+
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year &nbsp;|&nbsp; David Lawrence Real Estate REAA 2008 &nbsp;|&nbsp; (03)382-6111 &nbsp;
+            |&nbsp; <a href="www.davidlawrence.kiwi">www.davidlawrence.kiwi</a> &nbsp;|&nbsp; 
+            <a href="mailto:office@davidlawrence.kiwi">office@davidlawrence.kiwi</a> &nbsp;|&nbsp; 
+            Office: 19 Lenton Street, Christchurch 8061</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
